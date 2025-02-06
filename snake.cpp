@@ -1,9 +1,10 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#include <queue>
+#include <deque>
 #include <ctime>
 #include <algorithm>
+using namespace std;
 
 const int WIDTH = 20;
 const int HEIGHT = 20;
@@ -25,7 +26,7 @@ private:
     int score;
     int highScore;
     Point food;
-    std::deque<Point> snake;
+    deque<Point> snake;
     char board[HEIGHT][WIDTH];
 
     void Setup() {
@@ -63,10 +64,10 @@ private:
 
         for (int i = 0; i < HEIGHT; ++i) {
             for (int j = 0; j < WIDTH; ++j)
-                std::cout << board[i][j];
-            std::cout << std::endl;
+                cout << board[i][j];
+            cout << endl;
         }
-        std::cout << "Score: " << score << " | High Score: " << highScore << std::endl;
+        cout << "Score: " << score << " | High Score: " << highScore << endl;
     }
 
     void Input() {
@@ -108,14 +109,14 @@ private:
             snake.pop_back();
         }
 
-        highScore = std::max(highScore, score);
+        highScore = max(highScore, score);
     }
 
     void GenerateFood() {
         do {
             food.x = rand() % (WIDTH - 2) + 1;
             food.y = rand() % (HEIGHT - 2) + 1;
-        } while (std::find(snake.begin(), snake.end(), food) != snake.end());
+        } while (find(snake.begin(), snake.end(), food) != snake.end());
     }
 
 public:
@@ -132,8 +133,8 @@ public:
                 Logic();
                 Sleep(100);
             }
-            std::cout << "Game Over! Your score: " << score << std::endl;
-            std::cout << "Press 'r' to restart or 'q' to quit." << std::endl;
+            cout << "Game Over! Your score: " << score << endl;
+            cout << "Press 'r' to restart or 'q' to quit." << endl;
             char choice;
             do {
                 choice = _getch();
