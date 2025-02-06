@@ -32,7 +32,7 @@ collides with itself or the boundaries of the play area.
 - Windows OS.
 - C++ compiler.
 ## Data Structure Analysis 
-We have used Deque(Dopuble ended queue)as the data structure to represent snake's body because it allows faster insertion and removal of body from both the ends. The other data structure is 2D-Array to make the play area of the game.
+We have used Deque(Double-ended queue) as the data structure to represent snake's body because it allows faster insertion and removal of body from both the ends. The other data structure is 2D-Array to make the play area of the game. We have used two classes namely point class and snakegame class. Point class is used for coordinates on the playarea for snake and fruit. Snakegame class is used for all the logic of game, random generation of fruit in the form of methods(functions).
 
 
 ## Installation
