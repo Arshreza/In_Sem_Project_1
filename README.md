@@ -31,6 +31,9 @@ collides with itself or the boundaries of the play area.
 ## Requirements
 - Windows OS.
 - C++ compiler.
+## Data Structure Analysis 
+We have used Queue as the data structure for 
+
 
 ## Installation
 - Download code from github link
