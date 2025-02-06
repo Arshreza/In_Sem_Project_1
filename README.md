@@ -32,7 +32,7 @@ collides with itself or the boundaries of the play area.
 - Windows OS.
 - C++ compiler.
 ## Data Structure Analysis 
-We have used Queue as the data structure for 
+We have used Deque(Dopuble ended queue)as the data structure to represent snake's body because it allows faster insertion and removal of body from both the ends. The other data structure is 2D-Array to make the play area of the game.
 
 
 ## Installation
